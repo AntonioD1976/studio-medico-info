@@ -1,30 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Studio Medico - Applicazione gestionale</title>
+  <meta name="description" content="Presentazione del gestionale privato Studio Medico e di Studio Medico Backup: appuntamenti, fatture, integrazioni Google e copie cifrate su Drive.">
+  <title>Studio Medico — Gestionale e backup privato</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f7fa; color: #202c39; font: 1rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 54rem; margin: 2rem auto; padding: 2rem; background: #fff; border: 1px solid #dbe2ea; border-radius: .75rem; }
+    h1 { margin-top: 0; font-size: 2rem; line-height: 1.2; }
+    h2 { margin-top: 1.8rem; font-size: 1.25rem; line-height: 1.35; }
+    a { color: #075d9f; text-underline-offset: .15em; overflow-wrap: anywhere; }
+    a:focus-visible { outline: 3px solid #a95200; outline-offset: 3px; }
+    li + li { margin-top: .4rem; }
+    .note { background: #eef4fb; border-left: 4px solid #075d9f; padding: .8rem 1rem; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #dbe2ea; font-size: .9rem; }
+    @media (max-width: 600px) { main { margin: 0; padding: 1.25rem; border: 0; border-radius: 0; } }
+  </style>
 </head>
 <body>
+<main>
   <h1>Studio Medico</h1>
+  <p>Applicazione gestionale privata per le attività di uno studio medico. L’accesso al gestionale è riservato agli utenti autorizzati; questa pagina presenta pubblicamente le sue funzioni e le integrazioni Google.</p>
 
-  <p>
-    Applicazione privata per la gestione delle attività
-    di uno studio medico.
-  </p>
+  <h2>Funzioni del gestionale</h2>
+  <ul>
+    <li>Gestione dell’anagrafica pazienti, delle prestazioni e degli appuntamenti.</li>
+    <li>Sincronizzazione degli appuntamenti con i calendari Google autorizzati.</li>
+    <li>Gestione delle fatture e dei documenti PDF.</li>
+    <li>Verifica degli indirizzi email e invio dei documenti tramite gli account Gmail collegati, secondo le impostazioni e le autorizzazioni dello studio.</li>
+  </ul>
+  <p>La versione attuale utilizza Vercel per l’applicazione e Neon per il database PostgreSQL e l’archivio dei PDF.</p>
 
-  <p>
-    L'applicazione consente la gestione degli appuntamenti
-    attraverso l'integrazione con Google Calendar.
-  </p>
+  <h2>Studio Medico Backup</h2>
+  <p><strong>Studio Medico Backup</strong> è il collegamento Google dedicato alla conservazione su Drive di copie di sicurezza e di recupero del gestionale. È gestito dall’amministratore e può usare un account distinto da quelli impiegati per Calendar o Gmail.</p>
+  <p>Il processo, eseguito tramite GitHub Actions, può essere avviato manualmente e, quando abilitato, automaticamente. Prepara una copia completa di database, PDF e configurazioni necessarie al recupero, insieme al codice dell’applicazione, e la cifra prima di caricarla nella cartella Drive confermata dall’amministratore.</p>
+  <p class="note"><strong>Permesso Drive:</strong> l’autorizzazione richiesta consente di visualizzare, modificare, creare ed eliminare tutti i file Drive dell’account collegato. Il codice del backup limita le operazioni sui file alla cartella di destinazione confermata. Questa limitazione applicativa non restringe il permesso concesso da Google all’intero Drive.</p>
+  <p>Le copie servono a ripristinare il gestionale, anche su un computer locale durante un’emergenza. Il backup non esporta l’intera casella Gmail o tutti gli eventi di Google Calendar: include i dati già presenti nel gestionale e le configurazioni per ricollegare i servizi.</p>
 
-  <p>
-    L'accesso al gestionale è riservato agli utenti autorizzati.
-  </p>
+  <h2>Autorizzazioni e riservatezza</h2>
+  <p>Il collegamento degli account Google è riservato agli amministratori e non sostituisce l’autenticazione al gestionale. Le autorizzazioni possono essere revocate dall’account Google.</p>
+  <p>Le modalità di accesso, utilizzo, conservazione e gestione dei dati, compreso il trattamento temporaneo durante i backup, sono descritte nell’<a href="privacy.html">informativa sulla privacy</a>.</p>
 
-  <p>
-    <a href="privacy.html">Informativa sulla privacy</a>
-  </p>
+  <h2>Responsabile del progetto e contatti</h2>
+  <p>Dott. Antonio Duino — Medico libero professionista<br><a href="mailto:dvcardiocenter@gmail.com">dvcardiocenter@gmail.com</a></p>
+  <p><a href="https://studio-medico-next.vercel.app/">Accesso al gestionale per gli utenti autorizzati</a></p>
+  <footer><a href="privacy.html">Informativa sulla privacy</a> · Aggiornamento: <time datetime="2026-10-29">29 ottobre 2026</time></footer>
+</main>
 </body>
 </html>

@@ -1,114 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>Privacy - Studio Medico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy del gestionale privato Studio Medico e di Studio Medico Backup: dati Google Calendar e Gmail, backup cifrati su Drive e servizi tecnici utilizzati.">
+  <title>Privacy — Studio Medico e Studio Medico Backup</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f7fa; color: #202c39; font: 1rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 54rem; margin: 2rem auto; padding: 2rem; background: #fff; border: 1px solid #dbe2ea; border-radius: .75rem; }
+    h1 { margin-top: 0; font-size: 2rem; line-height: 1.2; }
+    h2 { margin-top: 1.8rem; font-size: 1.25rem; line-height: 1.35; }
+    a { color: #075d9f; text-underline-offset: .15em; overflow-wrap: anywhere; }
+    a:focus-visible { outline: 3px solid #a95200; outline-offset: 3px; }
+    li + li { margin-top: .4rem; }
+    .note { background: #eef4fb; border-left: 4px solid #075d9f; padding: .8rem 1rem; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #dbe2ea; font-size: .9rem; }
+    @media (max-width: 600px) { main { margin: 0; padding: 1.25rem; border: 0; border-radius: 0; } }
+  </style>
 </head>
 <body>
-  <h1>Informativa privacy - Studio Medico</h1>
-
-  <p>
-    Questa informativa descrive il trattamento dei dati
-    nell'ambito dell'applicazione gestionale privata
-    Studio Medico e della sua integrazione con
-    Google Calendar.
-  </p>
+<main>
+  <nav aria-label="Navigazione"><a href="index.html">Torna alla presentazione</a></nav>
+  <h1>Informativa privacy</h1>
+  <p><strong>Studio Medico e Studio Medico Backup</strong><br>Aggiornamento: <time datetime="2026-10-29">29 ottobre 2026</time></p>
+  <p>Questa pagina descrive il trattamento dei dati nel gestionale privato Studio Medico, nella versione attuale basata su Next.js e Neon, e nei collegamenti a Google Calendar, Gmail e Google Drive. Studio Medico Backup è il collegamento dedicato alle copie di sicurezza su Drive.</p>
 
   <h2>Titolare del trattamento</h2>
-  <p>
-    Dott. Antonio Duino<br>
-    Medico libero professionista<br>
-    Email: dvcardiocenter@gmail.com
-  </p>
+  <p>Dott. Antonio Duino<br>Medico libero professionista<br>Email: <a href="mailto:dvcardiocenter@gmail.com">dvcardiocenter@gmail.com</a></p>
 
-  <h2>Finalità del trattamento</h2>
-  <p>
-    L'applicazione è utilizzata per la gestione
-    degli appuntamenti e delle attività
-    amministrative dello studio medico.
-  </p>
+  <h2>Finalità e dati trattati</h2>
+  <p>Il gestionale è utilizzato per organizzare appuntamenti, anagrafiche, prestazioni, fatture e comunicazioni dello studio, verificare gli indirizzi email e garantire la disponibilità e il recupero dei dati.</p>
+  <p>I dati trattati possono comprendere anagrafiche e recapiti dei pazienti, date e contenuti degli appuntamenti, prestazioni, dati amministrativi e fiscali, documenti PDF, stato delle comunicazioni e delle verifiche email. I contenuti inseriti dallo studio possono includere informazioni relative alla salute.</p>
+  <p>Per collegare i servizi Google vengono inoltre trattati l’identità dell’account autorizzato, l’indirizzo email, gli identificativi tecnici, i permessi concessi e le credenziali OAuth necessarie a mantenere il collegamento. I collegamenti sono gestiti dagli amministratori autorizzati.</p>
 
-  <h2>Accesso a Google Calendar</h2>
-  <p>
-    L'applicazione utilizza le autorizzazioni
-    Google concesse dall'utente per leggere,
-    creare, modificare e cancellare eventi
-    nei calendari autorizzati.
-  </p>
-  <p>
-    Le informazioni degli eventi vengono
-    utilizzate per sincronizzare gli appuntamenti
-    con il database del gestionale e per
-    identificare il paziente associato.
-  </p>
+  <h2>Google Calendar</h2>
+  <p>L’applicazione utilizza le autorizzazioni concesse per leggere l’elenco dei calendari e leggere, creare, modificare o cancellare eventi nei calendari dello studio abilitati nel gestionale.</p>
+  <p>I dati possono comprendere identificativi, titoli, date, orari, descrizioni e note degli eventi, oltre a nomi e colori dei calendari. Sono usati per sincronizzare gli appuntamenti con il database e identificare il paziente associato. Le informazioni necessarie agli appuntamenti possono essere conservate nel database del gestionale.</p>
 
-  <h2>Conservazione dei dati</h2>
-  <p>
-    I dati necessari alla gestione degli
-    appuntamenti possono essere memorizzati
-    nel database Supabase utilizzato
-    dall'applicazione.
-  </p>
-  <p>
-    I periodi di conservazione sono determinati
-    in relazione alle finalità del trattamento
-    e agli obblighi normativi applicabili.
-    Ulteriori informazioni possono essere
-    richieste al titolare.
-  </p>
+  <h2>Gmail e comunicazioni</h2>
+  <p>Gli account Gmail collegati sono utilizzati per inviare messaggi di verifica degli indirizzi email e documenti di fatturazione ai destinatari previsti dalle funzioni del gestionale, secondo le impostazioni dello studio e le autorizzazioni applicabili.</p>
+  <p>I permessi di lettura Gmail consentono le verifiche tecniche sul profilo dell’account e la gestione degli esiti di invio e dei messaggi di mancata consegna. Possono essere trattati identificativi dei messaggi, destinatari, date, informazioni di consegna e contenuti necessari a interpretare le notifiche di errore. Non viene eseguito un backup generale della casella Gmail.</p>
 
-  <h2>Condivisione e sicurezza</h2>
-  <p>
-    L'accesso al gestionale è riservato
-    agli utenti autorizzati.
-    I servizi tecnici utilizzati comprendono
-    Google Calendar e Supabase.
-  </p>
-  <p>
-    I dati ottenuti tramite Google Calendar
-    non sono utilizzati per pubblicità
-    o profilazione commerciale.
-  </p>
+  <h2>Google Drive e Studio Medico Backup</h2>
+  <p>Il collegamento BACKUP è dedicato all’account e alla cartella Drive confermati dall’amministratore. Sono utilizzati l’identità dell’account, i metadati della cartella e dei file di backup, le informazioni sullo spazio disponibile e i contenuti cifrati degli archivi per caricarli, rileggerli e verificarli.</p>
+  <p class="note"><strong>Ampiezza del consenso:</strong> lo scope Drive richiesto consente di visualizzare, modificare, creare ed eliminare tutti i file Drive dell’account. Il codice limita la gestione dei file di backup alla cartella confermata; non si tratta di un’autorizzazione Google limitata a quella sola cartella. Il consenso viene richiesto all’amministratore prima del collegamento.</p>
+  <p>Il processo crea archivi cifrati, verifica mediante rilettura l’integrità dei file caricati e gestisce la cancellazione delle vecchie copie riconosciute come backup verificati prodotti dallo stesso strumento. Non è destinato a raccogliere documenti estranei al backup presenti nel Drive dell’account.</p>
 
-  <h2>Revoca dell'accesso Google</h2>
-  <p>
-    L'utente può revocare le autorizzazioni
-    concesse all'applicazione attraverso
-    le impostazioni di sicurezza del proprio
-    account Google.
-  </p>
-  <p>
-    La revoca interrompe il futuro accesso
-    ai dati Google tramite tale autorizzazione,
-    ma non comporta automaticamente la
-    cancellazione dei dati già conservati
-    nel gestionale.
-  </p>
+  <h2>Contenuto dei backup e cifratura</h2>
+  <p>Ogni copia completa comprende il database del gestionale, i PDF di fatturazione referenziati nella copia del database, le configurazioni e le credenziali tecniche incluse nel pacchetto di recupero, il catalogo dei calendari e il codice dell’applicazione. Il contenuto è riservato agli amministratori e agli incaricati autorizzati al ripristino.</p>
+  <p>Il pacchetto viene cifrato con age prima dell’invio a Drive, usando la chiave pubblica di recupero. La chiave privata necessaria a decifrarlo è custodita separatamente dal titolare e non viene fornita al workflow di backup o inserita nel pacchetto.</p>
+  <p>La cifratura riguarda il pacchetto archiviato su Drive. Non significa che i dati siano sempre cifrati durante ogni operazione: durante la preparazione, sul sistema di esecuzione GitHub Actions sono temporaneamente elaborati il dump, i PDF e le configurazioni prima della cifratura. Durante un ripristino autorizzato i file vengono decifrati e resi disponibili sul computer utilizzato.</p>
 
-  <h2>Diritti degli interessati</h2>
-  <p>
-    Gli interessati possono rivolgersi
-    al titolare per informazioni e per
-    esercitare i diritti previsti dalla
-    normativa applicabile in materia
-    di protezione dei dati personali.
-  </p>
+  <h2>Servizi tecnici e conservazione</h2>
+  <ul>
+    <li><strong>Vercel:</strong> esecuzione dell’applicazione web e gestione delle richieste del gestionale.</li>
+    <li><strong>Neon:</strong> database PostgreSQL e archivio dei PDF della versione attuale.</li>
+    <li><strong>Google Calendar, Gmail e Drive:</strong> servizi collegati per appuntamenti, comunicazioni e conservazione dei backup cifrati.</li>
+    <li><strong>GitHub Actions:</strong> esecuzione del processo di backup; le credenziali necessarie sono configurate nei secret del repository privato.</li>
+    <li><strong>Computer e supporti locali:</strong> copie scaricate, chiavi di recupero e dati ripristinati per collaudi o emergenze, sotto il controllo del titolare e degli operatori autorizzati.</li>
+  </ul>
+  <p>Questi servizi intervengono nei trattamenti tecnici descritti. Le condizioni di erogazione, le infrastrutture utilizzate e le misure applicabili dipendono dai servizi e dalle configurazioni adottate; per informazioni specifiche è possibile contattare il titolare. Non viene dichiarato che tutti i dati siano trattati esclusivamente in Italia.</p>
+  <p>La conservazione del database e dei documenti è determinata in relazione alle finalità di gestione e agli obblighi applicabili. La cancellazione di un dato dal database attivo non elimina automaticamente lo stesso dato dalle copie di sicurezza già create.</p>
+  <p>La configurazione iniziale del processo prevede la conservazione delle ultime <strong>14 copie complete verificate</strong> gestite dal backup nella cartella di destinazione. Si tratta di un numero di copie, non di un termine fisso di 14 giorni; la pianificazione automatica opera solo quando viene abilitata. Errori di caricamento o pulizia possono richiedere interventi manuali. Le copie scaricate su PC o supporti esterni e gli eventuali residui di esecuzioni interrotte sono gestiti separatamente dal titolare.</p>
 
-  <h2>Contatti</h2>
-  <p>
-    Per richieste relative alla privacy
-    o ai dati Google Calendar:
-    <a href="mailto:dvcardiocenter@gmail.com">
-      dvcardiocenter@gmail.com
-    </a>
-  </p>
+  <h2>Uso limitato e sicurezza</h2>
+  <p>I dati ottenuti tramite le API Google sono utilizzati per le funzioni del gestionale e per il backup e il recupero descritti in questa pagina. Non sono venduti, utilizzati per pubblicità o profilazione commerciale, né usati dall’applicazione per addestrare modelli di intelligenza artificiale.</p>
+  <p>L’uso dei dati Google è soggetto alle <a href="https://developers.google.com/terms/api-services-user-data-policy">Norme relative ai dati utente dei servizi API Google</a>, inclusi i requisiti di uso limitato applicabili. L’accesso ai dati è riservato alle persone autorizzate per le attività descritte e per gli interventi tecnici necessari.</p>
+  <p>Il gestionale prevede autenticazione e controllo dei ruoli. Le credenziali OAuth conservate nel database sono cifrate; gli archivi di backup su Drive sono cifrati prima del caricamento. Queste misure non sostituiscono la corretta custodia degli account, dei computer e delle chiavi di recupero da parte degli operatori.</p>
 
-  <p>
-    <a href="index.html">Torna alla home page</a>
-  </p>
+  <h2>Revoca, scollegamento e cancellazione</h2>
+  <p>L’utente può revocare le autorizzazioni dalle <a href="https://myaccount.google.com/connections">impostazioni dei collegamenti del proprio Account Google</a>. La revoca può interrompere le funzioni che utilizzano quella autorizzazione.</p>
+  <p>Lo scollegamento del servizio BACKUP nell’app e la configurazione privata di GitHub Actions sono distinti. Il workflow deve essere disabilitato o aggiornato dall’amministratore quando necessario; una credenziale già esportata non viene automaticamente cancellata da GitHub scollegando il servizio nell’app.</p>
+  <p>La revoca o lo scollegamento non cancellano automaticamente dati, messaggi già inviati, documenti o copie di sicurezza già conservati. Per richieste di cancellazione o chiarimenti sulla conservazione è possibile contattare il titolare, tenendo conto degli obblighi applicabili e delle copie di recupero esistenti.</p>
+
+  <h2>Diritti e contatti</h2>
+  <p>Gli interessati possono contattare il titolare per ricevere informazioni e per esercitare, nei casi e nei limiti previsti dalla normativa applicabile, i diritti di accesso, rettifica, cancellazione, limitazione, opposizione e portabilità. Possono inoltre rivolgersi all’autorità di controllo competente.</p>
+  <p>Per richieste relative al gestionale, alle integrazioni Google e ai backup: <a href="mailto:dvcardiocenter@gmail.com">dvcardiocenter@gmail.com</a>.</p>
+  <p>Questa pagina descrive il funzionamento del gestionale e delle integrazioni. Le autorizzazioni OAuth riguardano l’accesso tecnico agli account Google e non sostituiscono gli altri presupposti necessari per il trattamento dei dati sanitari e amministrativi. Per informazioni sul trattamento dei dati nell’ambito delle prestazioni dello studio, rivolgersi al titolare.</p>
+  <footer><a href="index.html">Torna alla home page</a></footer>
+</main>
 </body>
 </html>
-
